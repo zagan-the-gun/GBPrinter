@@ -36,10 +36,13 @@ void setup() {
   setupPrinter(GBIn, GBOut, GBClock);
   initPrinter();
   Serial.begin(9600);
-  while (!Serial) {
+//  while (!Serial) {
     ; // wait for serial port to connect. Needed for Leonardo only
-  }
+//  }
   Serial.println("Gameboy Printer for Arduino");
+  Serial.println(GBIn);
+  Serial.println(GBOut);
+  Serial.println(GBClock);
 }
 
 void loop() {
@@ -286,11 +289,11 @@ void printText (String c) {
   */    
       for (int  i= 0; i<5; i++) {
 //        Serial.print((car-31)*5+i);
- //       Serial.print(": ");
-      //  uint8_t b = alphabet[(car-32)*5+i];
+//        Serial.print(": ");
+//        uint8_t b = alphabet[(car-32)*5+i];
 //        Serial.print(b, HEX);
-     //   print_binary(b, 8);
-        Serial.println();
+//        print_binary(b, 8);
+//        Serial.println();
       }
     //  Serial.println();
       Serial.println();
